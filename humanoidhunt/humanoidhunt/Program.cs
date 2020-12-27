@@ -11,7 +11,8 @@ namespace humanoidhunt
         static void Main(string[] args)
         {
             //Task01.Run();
-            Task02.Run();
+            //Task02.Run();
+            Task03.Run();
         }
     }
 }
