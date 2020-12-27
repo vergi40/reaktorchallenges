@@ -63,12 +63,13 @@ namespace humanoidhunt
             
         }
 
+
         private static void PrintSnapShotSmall(PathType[,] map, List<(int x, int y)> routeBehind = null, int yOffset = 0)
         {
-            Console.WriteLine(Environment.NewLine);
-            Console.WriteLine(Environment.NewLine);
-            Console.WriteLine(Environment.NewLine);
-            Console.WriteLine("Snapshot:");
+            //QueuedConsole.WriteLine(Environment.NewLine);
+            //QueuedConsole.WriteLine(Environment.NewLine);
+            //QueuedConsole.WriteLine(Environment.NewLine);
+            QueuedConsole.WriteLine("Snapshot:");
             for (int i = 95 + yOffset; i < 150 + yOffset; i++)
             {
                 var line = "";
@@ -82,8 +83,9 @@ namespace humanoidhunt
 
                     line += ToFriendlyString(map[i, j]);
                 }
-                Console.WriteLine(line);
+                QueuedConsole.WriteLine(line);
             }
+            QueuedConsole.WriteAll();
         }
 
         private static void PrintSnapShot(PathType[,] map, List<(int x, int y)> routeBehind = null)
@@ -305,6 +307,27 @@ namespace humanoidhunt
                 else if (Directions.Last() == "S") map[x, y] = PathType.Start;
                 else if (Directions.Last() == "F") map[x, y] = PathType.Finish;
             }
+        }
+    }
+
+
+    // https://stackoverflow.com/questions/5272177/console-writeline-slow
+    public static class QueuedConsole
+    {
+        private static StringBuilder _sb = new StringBuilder();
+        private static int _lineCount;
+
+        public static void WriteLine(string message)
+        {
+            _sb.AppendLine(message);
+            ++_lineCount;
+        }
+
+        public static void WriteAll()
+        {
+            Console.WriteLine(_sb.ToString());
+            _lineCount = 0;
+            _sb.Clear();
         }
     }
 }
