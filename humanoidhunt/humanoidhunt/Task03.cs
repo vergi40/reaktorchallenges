@@ -20,6 +20,7 @@ namespace humanoidhunt
             var watch = new Stopwatch();
             watch.Start();
             var input = FileSystem.GetInput("input-neurallink");
+            //var input = FileSystem.GetInput("input-neurallink-example");
             var routes = new List<Route>();
             var map = new PathType[1000,1000];
 
@@ -58,9 +59,28 @@ namespace humanoidhunt
             }
 
             var result = FindPath(map, startPositions);
+            watch.Stop();
+            Console.WriteLine($"Path found. Time elapsed: {watch.ElapsedMilliseconds} ms");
             // Convert to instructions
 
+            string instructions = "";
+            for (int i = 1; i < result.Count; i++)
+            {
+                var previous = result[i - 1];
+                var next = result[i];
+
+                var diffX = next.x - previous.x;
+                var diffY = next.y - previous.y;
+
+                if (diffX == 1) instructions += "R";
+                else if (diffX == -1) instructions += "L";
+                else if (diffY == 1) instructions += "U";
+                else if (diffY == -1) instructions += "D";
+                else throw new ArgumentException();
+            }
             
+            Console.WriteLine($"Final instructions: {instructions}");
+
         }
 
 
@@ -70,18 +90,20 @@ namespace humanoidhunt
             //QueuedConsole.WriteLine(Environment.NewLine);
             //QueuedConsole.WriteLine(Environment.NewLine);
             QueuedConsole.WriteLine("Snapshot:");
-            for (int i = 95 + yOffset; i < 150 + yOffset; i++)
+            // Rows (y)
+            for (int i = 130 + yOffset; i > 95 + yOffset; i--)
             {
                 var line = "";
-                for (int j = 80; j < 150; j++)
+                // Columns (x)
+                for (int j = 80; j < 250; j++)
                 {
-                    if (routeBehind != null && routeBehind.Contains((i, j)))
+                    if (routeBehind != null && routeBehind.Contains((j, i)))
                     {
                         line += "*";
                         continue;
                     }
 
-                    line += ToFriendlyString(map[i, j]);
+                    line += ToFriendlyString(map[j, i]);
                 }
                 QueuedConsole.WriteLine(line);
             }
@@ -91,18 +113,21 @@ namespace humanoidhunt
         private static void PrintSnapShot(PathType[,] map, List<(int x, int y)> routeBehind = null)
         {
             Console.WriteLine("Snapshot:");
-            for (int i = 80; i < 250; i++)
+            
+            // Rows (y)
+            for (int i = 250; i > 80; i--)
             {
                 var line = "";
+                // Columns (x)
                 for (int j = 80; j < 250; j++)
                 {
-                    if (routeBehind != null && routeBehind.Contains((i,j)))
+                    if (routeBehind != null && routeBehind.Contains((j,i)))
                     {
                         line += "*";
                         continue;
                     }
                     
-                    line += ToFriendlyString(map[i, j]);
+                    line += ToFriendlyString(map[j, i]);
                 }
                 Console.WriteLine(line);
             }
@@ -196,7 +221,7 @@ namespace humanoidhunt
             
             if(PrintIterations)
             {
-                PrintSnapShotSmall(map, behind, 8);
+                PrintSnapShotSmall(map, behind, 0);
                 Thread.Sleep(PrintTimeout);
             }
             
