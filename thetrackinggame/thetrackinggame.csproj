@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\humanoidhunt\humanoidhunt.csproj" />
+    <ProjectReference Include="..\utils\utils.csproj" />
   </ItemGroup>
 
 </Project>
