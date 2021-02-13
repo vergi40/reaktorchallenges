@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "humanoidhunt", "humanoidhunt\humanoidhunt.csproj", "{25AD24D2-DB3A-49B8-B240-8D4C4D717B83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "humanoidhunt", "humanoidhunt\humanoidhunt.csproj", "{25AD24D2-DB3A-49B8-B240-8D4C4D717B83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thetrackinggame", "thetrackinggame\thetrackinggame.csproj", "{A78CA56E-A29F-4D02-8D80-BBD13C92134D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{25AD24D2-DB3A-49B8-B240-8D4C4D717B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25AD24D2-DB3A-49B8-B240-8D4C4D717B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25AD24D2-DB3A-49B8-B240-8D4C4D717B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A78CA56E-A29F-4D02-8D80-BBD13C92134D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A78CA56E-A29F-4D02-8D80-BBD13C92134D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A78CA56E-A29F-4D02-8D80-BBD13C92134D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A78CA56E-A29F-4D02-8D80-BBD13C92134D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
