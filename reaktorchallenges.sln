@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "humanoidhunt", "humanoidhunt\humanoidhunt.csproj", "{25AD24D2-DB3A-49B8-B240-8D4C4D717B83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thetrackinggame", "thetrackinggame\thetrackinggame.csproj", "{A78CA56E-A29F-4D02-8D80-BBD13C92134D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thetrackinggame", "thetrackinggame\thetrackinggame.csproj", "{A78CA56E-A29F-4D02-8D80-BBD13C92134D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "utils", "utils\utils.csproj", "{9D356FE7-B927-49E3-8D06-3F256BF1F1E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "santachallenge", "santachallenge\santachallenge.csproj", "{295B1ED4-7147-4B72-9898-23E3E4A71D88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{A78CA56E-A29F-4D02-8D80-BBD13C92134D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A78CA56E-A29F-4D02-8D80-BBD13C92134D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A78CA56E-A29F-4D02-8D80-BBD13C92134D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D356FE7-B927-49E3-8D06-3F256BF1F1E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D356FE7-B927-49E3-8D06-3F256BF1F1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D356FE7-B927-49E3-8D06-3F256BF1F1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D356FE7-B927-49E3-8D06-3F256BF1F1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{295B1ED4-7147-4B72-9898-23E3E4A71D88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{295B1ED4-7147-4B72-9898-23E3E4A71D88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{295B1ED4-7147-4B72-9898-23E3E4A71D88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{295B1ED4-7147-4B72-9898-23E3E4A71D88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
