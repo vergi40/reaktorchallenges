@@ -28,5 +28,13 @@ namespace humanoidhunt
             var content = File.ReadAllLines(path).ToList();
             return content;
         }
+
+        public static List<string> GetInput(string fileName, string projectName)
+        {
+            if (!Path.HasExtension(fileName)) fileName += ".txt";
+            var path = Path.Combine(GetSolutionPath(), projectName, fileName);
+            var content = File.ReadAllLines(path).ToList();
+            return content;
+        }
     }
 }

@@ -307,6 +307,13 @@ namespace humanoidhunt
                 var x = X;
                 var y = Y;
                 
+                // No directional inputs
+                if (Directions.Count == 0)
+                {
+                    map[x, y] = PathType.Free;
+                    return;
+                }
+                
                 foreach (var direction in Directions)
                 {
                     switch (direction)
