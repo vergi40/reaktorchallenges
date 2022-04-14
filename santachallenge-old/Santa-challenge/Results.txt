@@ -1,0 +1,32 @@
+﻿22.12.2018 19:53
+* Kaikki solut järjestyksessä
+* Well done! Your result was 81035592676 meters.
+* 81,035,592,676
+
+22.12.2018 20.36
+* Lajittelee solut korvatunturi-etäisyyden mukaan lyhimmästä pisimpään
+* Well done! Your result was 37509879981 meters.
+* 37,509,879,981
+
+23.12.2018 14:51
+* 
+* Something went wrong, the error was: Line 1: Sleigh overload! (10291862 > 10000000)
+* -> typo
+
+23.12.2018 15:41
+* Kruskal, max d=15, depth=20
+* 25min
+* Well done! Your result was 25470594938 meters.
+* 25,470,594,938
+
+23.12.2018 
+* Kruskal, max d=30, depth=20
+* 1h 16min
+* Well done! Your result was 32802781058 meters.
+* 32802,781,058
+
+
+TODO: tallenna 1. vaihe tiedostoon
+
+
+TODO: Kopioi ClassicLogger.config automaattisesti
